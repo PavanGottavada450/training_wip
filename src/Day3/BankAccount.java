@@ -2,9 +2,31 @@ package Day3;
 
 public class BankAccount {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	private String accountHolder;
+	private double balance;
+	
+	public BankAccount(String accountHolder, double initialBalance) {
+		this.accountHolder = accountHolder;
+		this.balance = initialBalance;
+	}
+	
+	public void deposit(double amount) {
+		balance += amount;
+		System.out.println(amount + " deposited new Balance : " + balance);
+	}
+	
+	public void withdraw(double amount) {
+		if(amount > balance) {
+			System.out.println("Insufficient balance");
+		} else {
+			balance -= amount;
+			System.out.println(amount + " withdrawn Remaining Balance :" + balance);
+		}
+	}
+	
+	public void displayDetails() {
+		System.out.println("Account Holder :" + accountHolder);
+		System.out.println("Balance : " + balance);
 	}
 
 }
