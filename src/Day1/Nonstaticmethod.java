@@ -1,4 +1,4 @@
-package demo;
+package Day1;
 
 class Counter{
 	int count = 0;

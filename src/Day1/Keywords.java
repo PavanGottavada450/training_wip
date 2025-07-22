@@ -1,4 +1,4 @@
-package demo;
+package Day1;
 import java.util.Scanner;
 
 public class Keywords {

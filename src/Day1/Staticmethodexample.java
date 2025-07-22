@@ -1,4 +1,4 @@
-package demo;
+package Day1;
 
 class Utils{
 	public static int add(int x, int y) {
