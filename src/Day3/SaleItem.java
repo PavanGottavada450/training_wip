@@ -19,4 +19,3 @@ public void displayItem() {
 	System.out.println(productName + "\t" + price + "\t" + quantity + "\t" + getTotalPrice());
 }
 }
-
