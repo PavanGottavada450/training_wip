@@ -1,4 +1,4 @@
-package Day5;
+package Day4;
 
 interface cal{
     int operator(int a, int b);

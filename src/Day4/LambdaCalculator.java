@@ -1,4 +1,4 @@
-package Day5;
+package Day4;
 
 interface LambdaCalculator1{
 	double num(double a,double b);
