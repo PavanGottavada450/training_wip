@@ -9,18 +9,18 @@ public class FactorialException {
 
 	        try {
 	            System.out.print("Enter a number to find factorial: ");
-	            int number = sc.nextInt();
+	            int num = sc.nextInt();
 	            
-	            if (number < 0) {
+	            if (num < 0) {
 	                throw new IllegalArgumentException("Factorial is not defined for negative numbers.");
 	            }
 
 	            long factorial = 1;
-	            for (int i = 1; i <= number; i++) {
+	            for (int i = 1; i <= num; i++) {
 	                factorial *= i;
 	            }
 
-	            System.out.println("Factorial of " + number + " is: " + factorial);
+	            System.out.println("Factorial of " + num + " is: " + factorial);
 	        } catch (Exception e) {
 	            System.out.println("Error occurred: " + e);
 	        } finally {

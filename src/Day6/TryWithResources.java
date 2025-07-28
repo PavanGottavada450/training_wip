@@ -5,20 +5,17 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class ReadCSV {
+public class TryWithResources {
 
 	public static void main(String[] args) {
+		
+		// try with resources
 
-		try {
-			BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\Pavan\\OneDrive\\Desktop\\data.csv"));
-			String line=br.readLine();
-		    while(line!=null) {
-		    	System.out.println("File Content : "+line);
-		    	line=br.readLine();
-		    	
+		try (BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\Pavan\\OneDrive\\Desktop\\data.csv"))) {
+			String line;
+		    while ((line = br.readLine()) != null) {
+		        System.out.println(line);
 		    }
-		   br.close(); 
-
 		} catch (FileNotFoundException e) {
 			System.out.println("CSV file not found.");
 		} catch (IOException e) {
